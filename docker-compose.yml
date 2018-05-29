@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  rethink:
+    image: rethinkdb:latest
+    ports:
+      - "28015:28015"
+      - "29015:29015"
+      - "8080:8080"
+    restart: always
+  redis:
+    image: redis:4.0.9-alpine
+    ports:
+     - "6379:6379"
+    restart: always

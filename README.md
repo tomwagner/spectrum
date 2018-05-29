@@ -160,11 +160,16 @@ git clone https://github.com/withspectrum/spectrum.git
 
 #### Installation
 
-Spectrum has four big installation steps:
+Spectrum has these installation steps:
 
 1. **Install RethinkDB**: See [the RethinkDB documentation](https://rethinkdb.com/docs/install/) for instructions on installing it with your OS.
 2. **Install Redis**: See [the Redis documentation](https://redis.io/download) for instructions on installing it with your OS.
+
 3. **Install yarn**: We use [yarn](https://yarnpkg.com) to handle our JavaScript dependencies. (plain `npm` doesn't work due to our monorepo setup) See [the yarn documentation](https://yarnpkg.com/en/docs/install) for instructions on installing it.
+
+or
+
+1. **Use Docker and install db's using Docker Compose**: `docker-compose up` and continue with step 3.
 
 Once you have RethinkDB, Redis and yarn installed locally its time to install the JavaScript dependencies. Because it's pretty tedious to install the dependencies for each worker individually we've created a script that goes through and runs `yarn install` for every worker for you: (this takes a couple minutes, so dive into the [technical docs](./docs) in the meantime)
 
@@ -269,4 +274,3 @@ Refer to [the Expo documentation on how to install the simulators](https://docs.
 ## License
 
 BSD 3-Clause, see the [LICENSE](./LICENSE) file.
-
